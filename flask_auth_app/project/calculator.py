@@ -115,3 +115,4 @@ print('C = ' + str(round(C, 3)) + "\n" + "\n")
 k = A * 0.4 + B * 0.4 + C * 0.2
 premiya = base * k
 print('' + str(round(premiya, 3)))
+input()
