@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/" method="POST" class="sections__form">
+    <label>База премии</label>
+    <input type="number" name="premium_value">
+    <label>Запланированный показатель а1</label>
+    <input type="number" name="plan_a1">
+    <label>Фактический показатель а1</label>
+    <input type="number" name="fact_a1">
+    <input type="number" name="">
+    <label>Запланированный показатель а2</label>
+    <input type="number" name="plan_a2">
+    <label>Фактический показатель а2</label>
+    <input type="number" name="fact_a2">
+    <input type="number" name="">
+    <label>Запланированный показатель а3</label>
+    <input type="number" name="plan_a3">
+    <label>Фактический показатель а3</label>
+    <input type="number" name="fact_a3">
+    <input type="number" name="">
+    <label>Запланированный показатель а4</label>
+    <input type="number" name="plan_a4">
+    <label>Фактический показатель а4</label>
+    <input type="number" name="fact_a4">
+    <button type="submit">Рассчитать премию</button>
+</form>
+{% endblock %}

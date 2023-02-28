@@ -1,13 +1,18 @@
 # main.py
 
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
 from flask_login import login_required, current_user
 
 main = Blueprint('main', __name__)
 
-@main.route('/')
+@main.route('/', methods=['POST','GET'])
 def index():
-    return render_template('index.html')
+    if request.method == 'GET':
+        return render_template('calculator.html')
+    else:
+        return render_template('result.html', premium_value=request.form['premium_value'], plan_a1 = request.form['plan_a1'], fact_a1 = request.form['fact_a1'])
+
+
 
 @main.route('/profile')
 @login_required
